@@ -1,0 +1,35 @@
+{
+    "services": [
+      {
+        "services_id": 1,
+        "services_name": "Specialised Doctors",
+        "services_img": "../src/assets/doctor.jpg"
+      },
+      {
+        "services_id": 2,
+        "services_name": "Online Appointment",
+        "services_img": "../src/assets/online book.jpg"
+      },
+      {
+        "services_id": 3,
+        "services_name": "Specialised Diagostic",
+        "services_img": "../src/assets/diagnstic.jpeg"
+      },
+      {
+        "services_id": 4,
+        "services_name": "Health & Wellness",
+        "services_img": "../src/assets/health.jpg"
+      },
+      {
+        "services_id": 5,
+        "services_name": "pharmacy",
+        "services_img": "../src/assets/pharmacy.jpeg"
+      },
+      {
+        "services_id": 6,
+        "services_name": "Ambulance Service",
+        "services_img": "../src/assets/ambulance.jpg"
+      }
+    ]
+  }
+  

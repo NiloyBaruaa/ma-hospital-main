@@ -1,0 +1,176 @@
+/* === Consultation Details Page Styles === */
+
+section.flex {
+    background-color: #f9fafb;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .drawer-side .menu {
+    background-color: #1f2937; /* Dark Gray */
+    color: #ffffff;
+  }
+  
+  .drawer-side .menu li a {
+    font-weight: bold;
+    color: #e5e7eb;
+  }
+  
+  .drawer-side .menu li a:hover {
+    background-color: #374151;
+    color: #ffffff;
+  }
+  
+  /* Main Heading */
+  h1.text-4xl {
+    color: #111827;
+  }
+  
+  /* Today's Reservations Section */
+  .today-reservations {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Table Styling */
+  table.table-auto {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+  }
+  
+  .table-auto th {
+    background-color: #f3f4f6;
+    font-weight: bold;
+  }
+  
+  .table-auto td,
+  .table-auto th {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+  }
+  
+  /* Status Styles */
+  td span.text-green-600 {
+    background-color: #dcfce7;
+    color: #16a34a;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    display: inline-block;
+  }
+  
+  td span.text-red-600 {
+    background-color: #fee2e2;
+    color: #b91c1c;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    display: inline-block;
+  }
+  
+  td span.text-yellow-600 {
+    background-color: #dbeafe;
+    color: #2563eb;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    display: inline-block;
+  }
+  
+  /* Action Buttons */
+  button.bg-green-500 {
+    background-color: #10b981;
+  }
+  
+  button.bg-green-500:hover {
+    background-color: #059669;
+  }
+  
+  button.bg-yellow-500 {
+    background-color: #3b82f6;
+  }
+  
+  button.bg-yellow-500:hover {
+    background-color: #2563eb;
+  }
+  
+  button.bg-red-600 {
+    background-color: #ef4444;
+  }
+  
+  button.bg-red-600:hover {
+    background-color: #dc2626;
+  }
+
+
+
+  /* Ensure spacing between Approve and Decline buttons */
+td .bg-green-500,
+td .bg-yellow-500 {
+  margin-right: 0.5rem;
+}
+
+/* Optional: Add spacing between all buttons inside a cell */
+td button {
+  margin-bottom: 0.25rem;
+}
+
+
+
+
+/* Make all action buttons same size */
+td button {
+   width: 100px;
+    height: 40px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 0.375rem; /* rounded-md */
+    text-align: center;
+  }
+  
+  /* Add spacing between buttons */
+  td .border-gray-400.px-4.py-2.space-x-2 {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Button hover colors */
+  .bg-green-500:hover {
+    background-color: #38a169; /* darker green */
+  }
+  .bg-yellow-500:hover {
+    background-color: #d69e2e; /* darker yellow */
+  }
+  .bg-red-600:hover {
+    background-color: #c53030; /* darker red */
+  }
+
+  
+ /* Ensure buttons are perfectly aligned */
+td .border-gray-400.px-4.py-2.space-x-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem; /* spacing between buttons */
+    padding: 0 !important; /* reset padding to keep alignment tight */
+    margin: 0 !important;
+  }
+  
+  /* Make all action buttons uniform */
+  td button {
+    min-width: 100px;
+    height: 40px;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    text-align: center;
+    /* display: inline-flex;
+    justify-content: center;
+    align-items: center; */
+  }
+  
+  

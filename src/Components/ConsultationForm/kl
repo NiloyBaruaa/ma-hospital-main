@@ -1,0 +1,189 @@
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import * as XLSX from "xlsx";
+import { saveAs } from "file-saver";
+
+const ConsultationForm = ({ selectedDoctor }) => {
+    const [formData, setFormData] = useState({
+        patientName: "",
+        birthDate: "",
+        sex: "",
+        mobile: "",
+        email: "",
+        doctor: "",
+        specialty: "",
+        consultationDate: "",
+        consultationTime: "",
+    });
+
+    const [availableDays, setAvailableDays] = useState([]);
+
+    useEffect(() => {
+        if (selectedDoctor) {
+            setAvailableDays(selectedDoctor.doctor_day || []);
+        }
+    }, [selectedDoctor]);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const handleDateChange = (date) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            consultationDate: date,
+        }));
+    };
+
+    const handleBirthDateChange = (date) => {
+        setFormData((prevData) => ({
+            ...prevData,
+            birthDate: date,
+        }));
+    };
+
+    const exportToExcel = (data) => {
+        const formattedData = [
+            {
+                "Patient Name": data.patientName,
+                "Date of Birth": data.birthDate.toLocaleDateString(),
+                Sex: data.sex,
+                Mobile: data.mobile,
+                Email: data.email,
+                Doctor: data.doctor,
+                Specialty: data.specialty,
+                "Consultation Date": data.consultationDate.toLocaleDateString(),
+                "Consultation Time": data.consultationTime,
+            },
+        ];
+
+        const worksheet = XLSX.utils.json_to_sheet(formattedData);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Consultations");
+
+        const excelBuffer = XLSX.write(workbook, { bookType: "xlsx", type: "array" });
+        const blob = new Blob([excelBuffer], { type: "application/octet-stream" });
+        saveAs(blob, "Consultation_Details.xlsx");
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const updatedFormData = {
+            ...formData,
+            doctor: selectedDoctor?.doctor_name || "",
+            specialty: selectedDoctor?.doctor_specialist || "",
+        };
+
+        // Export the form data to an Excel file
+        exportToExcel(updatedFormData);
+    };
+
+    return (
+        <section>
+            <form onSubmit={handleSubmit}>
+                <label>
+                    Patient Name:
+                    <input
+                        type="text"
+                        name="patientName"
+                        value={formData.patientName}
+                        onChange={handleChange}
+                        required
+                    />
+                </label>
+
+                <label>
+                    Date of Birth:
+                    <DatePicker
+                        selected={formData.birthDate}
+                        onChange={handleBirthDateChange}
+                        dateFormat="MMMM d, yyyy"
+                        required
+                    />
+                </label>
+
+                <label>
+                    Sex:
+                    <select name="sex" value={formData.sex} onChange={handleChange} required>
+                        <option value="" disabled>Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </label>
+
+                <label>
+                    Mobile:
+                    <input
+                        type="number"
+                        name="mobile"
+                        value={formData.mobile}
+                        onChange={handleChange}
+                        required
+                    />
+                </label>
+
+                <label>
+                    Email:
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                    />
+                </label>
+
+                {selectedDoctor && (
+                    <>
+                        <label>
+                            Doctor:
+                            <input type="text" value={selectedDoctor.doctor_name} readOnly />
+                        </label>
+
+                        <label>
+                            Specialty:
+                            <input type="text" value={selectedDoctor.doctor_specialist} readOnly />
+                        </label>
+                    </>
+                )}
+
+                <label>
+                    Consultation Date:
+                    <DatePicker
+                        selected={formData.consultationDate}
+                        onChange={handleDateChange}
+                        dateFormat="MMMM d, yyyy"
+                        required
+                    />
+                </label>
+
+                <label>
+                    Consultation Time:
+                    <select
+                        name="consultationTime"
+                        value={formData.consultationTime}
+                        onChange={handleChange}
+                        required
+                    >
+                        <option value="" disabled>Select Time</option>
+                        <option value="9:00am - 11:00am">9:00am - 11:00am</option>
+                        <option value="11:00am - 1:00pm">11:00am - 1:00pm</option>
+                        <option value="1:00pm - 3:00pm">1:00pm - 3:00pm</option>
+                        <option value="3:00pm - 5:00pm">3:00pm - 5:00pm</option>
+                    </select>
+                </label>
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    );
+};
+
+export default ConsultationForm;

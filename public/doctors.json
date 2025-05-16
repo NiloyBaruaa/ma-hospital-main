@@ -14,7 +14,7 @@
       {
         "doctor_id": "D002",
         "doctor_name": "Dr. Misbahus Salehin",
-        "doctor_image": "../src/assets/female-doctor-avatar-clipart-icon-260nw-2053928837.webp",
+        "doctor_image": "/public/Doctor New Image/MIsbahus Salehin.png",
         "doctor_degree": "MBBS, BCS (Health), MD (Medicine)",
         "doctor_rank" : "Senior Consultant",
         "doctor_department" : "Medicine",
@@ -136,7 +136,7 @@
         "doctor_id": "D013",
         "doctor_name": "Dr. Joynab Begum Bobi",
         "doctor_image": "../src/assets/female-doctor-avatar-clipart-icon-260nw-2053928837.webp",
-        "doctor_degree": "MBBS(CMC),BCS(HEALTH),DGO,FCPS(PART-2) ",
+        "doctor_degree": "MBBS(CMC),BCS(HEALTH),         DGO,   FCPS(PART-2) ",
         "doctor_rank" : "Senior Consultant",
         "doctor_department" : "Gyanecology",
         "doctor_specialist": "Gynaecologist",
@@ -256,7 +256,7 @@
       {
         "doctor_id": "D024",
         "doctor_name": "Dr. MD Omar Faruk Tuhin",
-        "doctor_image": "/public/Doctor New Image/Tuhin.jpg",
+        "doctor_image": "/public/Doctor New Image/Omar Faruk Tuhin.jpg",
         "doctor_degree": "MBBS, BCS (health), FCPS (Surgery), FACS (America), EFIGS (India)",
         "doctor_rank" : "Assistant Professor",
         "doctor_department" : "Surgery",
@@ -345,7 +345,7 @@
       {
         "doctor_id": "D032",
         "doctor_name": "Dr. MD Kamrul Hasan",
-        "doctor_image": "../src/assets/female-doctor-avatar-clipart-icon-260nw-2053928837.webp",
+        "doctor_image": "/public/Doctor New Image/Kamrul.png",
         "doctor_degree": "MBBS (CMC), BCS (Health), MD (Dermatology) ",
         "doctor_rank" : "Consultant",
         "doctor_department" : "Dermatology",
@@ -389,7 +389,7 @@
       {
         "doctor_id": "D036",
         "doctor_name": "Dr. Bijoy Kumar Dutta",
-        "doctor_image": "../src/assets/female-doctor-avatar-clipart-icon-260nw-2053928837.webp",
+        "doctor_image": "/public/Doctor New Image/Bijoy Kumar.png",
         "doctor_degree": "MBBS, BCS (Health), MD ( Psychiatry)",
         "doctor_rank" : "Assistant Professor",
         "doctor_department" : "Psychiatry",
@@ -400,7 +400,7 @@
       {
         "doctor_id": "D037",
         "doctor_name": "Dr. Riyad Mohammad Marjuk",
-        "doctor_image": "../src/assets/female-doctor-avatar-clipart-icon-260nw-2053928837.webp",
+        "doctor_image": "/public/Doctor New Image/Riyad Marjuk.jpg",
         "doctor_degree": "MBBS, BCS (Health), MD (Neurology)-BSMMU",
         "doctor_rank" : "Consultant",
         "doctor_department" : "Neurology",
@@ -411,7 +411,7 @@
       {
         "doctor_id": "D038",
         "doctor_name": "Dr. Mohammad Mushfiqur Rahman",
-        "doctor_image": "../src/assets/female-doctor-avatar-clipart-icon-260nw-2053928837.webp",
+        "doctor_image": "/public/Doctor New Image/Mushfiqur Rahman.jpg",
         "doctor_degree": "MBBS, BCS (Health), D.A",
         "doctor_rank" : "Assistant Professor (Anesthesia)",
         "doctor_department" : "Pain-Medicine",
@@ -444,7 +444,7 @@
       {
         "doctor_id": "D041",
         "doctor_name": "Dr. Ayaz Mahmud",
-        "doctor_image": "../src/assets/female-doctor-avatar-clipart-icon-260nw-2053928837.webp",
+        "doctor_image": "/public/Doctor New Image/Ayaz Mahmud.jpg",
         "doctor_degree": "MBBS, BCS (Health), D.A (BSMMU)",
         "doctor_rank" : "Junior Consultant",
         "doctor_department" : "Pain-Medicine",
@@ -455,7 +455,7 @@
       {
         "doctor_id": "D042",
         "doctor_name": "Dr. MD Hossain AL Mamun",
-        "doctor_image": "../src/assets/female-doctor-avatar-clipart-icon-260nw-2053928837.webp",
+        "doctor_image": "/public/Doctor New Image/Hosen Al Mamun.jpg",
         "doctor_degree": "MBBS, BCS, DMU",
         "doctor_rank" : "Consultant",
         "doctor_department" : "Sonology",
@@ -466,7 +466,7 @@
       {
         "doctor_id": "D043",
         "doctor_name": "Dr. Raisa Fatema",
-        "doctor_image": "../src/assets/female-doctor-avatar-clipart-icon-260nw-2053928837.webp",
+        "doctor_image": "/public/Doctor New Image/Raisa Khatun.jpg",
         "doctor_degree": "MBBS (CU), PGT (DMC),CCD (BARDEM), DMU ",
         "doctor_rank" : "Consultant",
         "doctor_department" : "Sonology",

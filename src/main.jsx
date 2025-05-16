@@ -23,6 +23,9 @@ import Location from './Components/Location/Location.jsx';
 import ConsultationDetails from './Components/ConsultationDetails/ConsultationDetails.jsx';
 import DashboardPage from './Components/Dashboard/DashboardPage.jsx';
 import AppointmentsPage from './Components/AppointmentsPage/AppointmentsPage.jsx';
+import PrivateRoute from './routes/PrivateRoute.jsx';
+import AdminLogin from './Pages/AdminLogin.jsx';
+
 
 
 
@@ -91,12 +94,22 @@ const router = createBrowserRouter([
       element : <ConsultationDetails></ConsultationDetails>
      },
      {
+      path: '/admin-login',
+      element: <AdminLogin></AdminLogin>
+    },
+    
+     {
       path : '/adminDashboard',
-      element : <ConsultationDetails></ConsultationDetails>
+      element :
+      <PrivateRoute>
+      <ConsultationDetails></ConsultationDetails>
+      </PrivateRoute>
      },
      {
       path : '/admin-appointment-page',
-      element : <AppointmentsPage></AppointmentsPage>
+      element : 
+      <PrivateRoute>    <AppointmentsPage></AppointmentsPage> </PrivateRoute>
+  
      },
      {
       path : '/confirmation',

@@ -12,7 +12,7 @@ const Packages = () => {
     }, [])
     return (
         <div>
-            <h1 className="text-center text-black text-5xl m-20">Our Special Packages</h1>
+            <h1 className="text-center text-black text-5xl m-20 font-bold">Our Special Packages</h1>
          
                 <div className="flex gap-10">
                     <Marquee>

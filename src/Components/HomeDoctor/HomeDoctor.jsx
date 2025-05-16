@@ -12,7 +12,7 @@ const HomeDoctor = () => {
     },[]) 
     const slicedDoctor = doctors.slice(0,4)
     return (
-        <div className="w-11/12 mx-auto">
+        <div className="w-11/12 mx-auto mt-32 text-black">
             <h1 className="text-center font-bold mt-9 text-5xl">Specialised Doctors</h1>
        <div className="grid grid-cols-1 md:grid-cols-2 gap-5   mt-10">
        {

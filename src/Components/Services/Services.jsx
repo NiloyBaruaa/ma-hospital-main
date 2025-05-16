@@ -10,8 +10,8 @@ const Services = () => {
             .then(data => setServices(data.services))
     }, [])
     return (
-        <div className="mt-48 w-full ">
-            <h1 className="text-6xl font-bold text-center">Our Services</h1>
+        <div className="mt-72 w-full ">
+            <h1 className="text-6xl font-bold text-center text-black">Our Services</h1>
 
 
             <div className="grid grid-cols-1 md:grid-cols-3 mx-auto mt-10">

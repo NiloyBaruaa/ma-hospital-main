@@ -5,7 +5,7 @@ const Service = ({service}) => {
     console.log(services_id);
     
     return (
-        <div className="card bg-gradient-to-r from-cyan-500 to-blue-500 ... w-96 shadow-xl mx-7 my-4 border ">
+        <div className="card mt-12 bg-gradient-to-r from-cyan-500 to-blue-500 ... w-96 shadow-xl mx-7 my-4 border ">
         <figure>
           <img
             src={services_img}

@@ -4,6 +4,8 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
 import "./style.css";
+import { useNavigate } from "react-router-dom";
+
 
 const ConsultationDetails = () => {
   const location = useLocation();
@@ -45,6 +47,14 @@ const ConsultationDetails = () => {
       moment(reservation.consultationDate).format("YYYY-MM-DD") ===
       moment(selectedDate).format("YYYY-MM-DD")
   );
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("isAdminAuthenticated"); // ✅ Correct key
+    navigate("/admin-login");
+  };
+  
 
   // ✅ Add this helper function to get updated data for today
   const getTodayReservations = (data) => {
@@ -127,6 +137,23 @@ const ConsultationDetails = () => {
               <a>
                 <Link to={"/admin-appointment-page"}>Appointment</Link>
               </a>
+            </li>
+
+            <li>
+            <button
+        onClick={handleLogout}
+        style={{
+          background: "#e63946",
+          color: "white",
+          padding: "10px 20px",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+          marginTop: "20px",
+        }}
+      >
+        Logout
+      </button>
             </li>
           </ul>
         </div>

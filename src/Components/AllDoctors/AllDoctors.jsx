@@ -15,7 +15,7 @@ const AllDoctors = () => {
     return (
         <div >
             <div>
-                <Sections></Sections>
+                {/* <Sections></Sections> */}
             </div>
             <div className="w-11/12 mx-auto">
                 <h1 className="text-center font-bold mt-9 text-5xl text-black">Specialised Doctors</h1>
